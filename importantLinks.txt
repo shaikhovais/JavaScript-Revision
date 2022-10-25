@@ -1,0 +1,6 @@
+************************ Execution Context ***********************************
+
+https://blog.bitsrc.io/understanding-execution-context-and-execution-stack-in-javascript-1c9ea8642dd0
+
+
+"Functions in JavaScript are lexically rather than dynamically scoped. This means that they run in the scope in which they are defined, not the scopee from which they are executed. When a function is defined, the current scope chain is saved and becomes part of the internal state of the function."
