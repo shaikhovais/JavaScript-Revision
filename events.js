@@ -1,4 +1,4 @@
-// Topics : Events, Type of Events, Event bubbling / Capturing / Propagation / Delegation, Stop event Propagation
+// Topics discussed in this file : Events, Type of Events, Event bubbling / Capturing / Propagation / Delegation, Stop event Propagation
 
 // Events are actions or occurrences that happen in the system we are programming, which the system tells us, so that our code can react to them.
 // For example, if the user clicks a button on a webpage, we might want to react to that action by displaying an information box.
@@ -133,6 +133,12 @@ button.addEventListener("click", (e) => {
 
 // <----------------------------- Event Propagation (Bubbling and Capturing) -------------------------------->
 // Event Propagation determines in which order the elements receive the event. There are two ways to handle this event propagation order of HTML DOM is Event Bubbling and Event Capturing.
+
+// |                /\
+// |                |
+// |                |
+// \/               |
+// capturing      Bubbling  
 
 // ********* Event Bubbling **************
 // When an event is triggered on an element it will bubble that event up the document tree to all the elements the element is inside of. In our example when the child is clicked it will also trigger a click event listener on the parent element since the child is inside the parent element. This even goes one step further and triggers a click event listener on the document itself as well. 

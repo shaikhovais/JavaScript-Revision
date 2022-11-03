@@ -1,3 +1,5 @@
+// Topics discussed in this file : DOM, selectors, create and remove elements, manipulate attributes, classlist
+
 // /* DOM stands for Document Object Model. It is a programming interface that allows us to create, change, or remove elements from the document. We can also add events to these elements to make our page more dynamic. The DOM views an HTML document as a tree of nodes. A node represents an HTML element. Our document is called the root node and contains one child node which is the <html> element. The <html> element contains two children which are the <head> and <body> elements. Both the <head> and <body> elements have children of their own. We can access these elements in the document and make changes to them using JavaScript. This is called DOM Manipulation */
 
 // // <--------------------------------- Selectors(Accessing DOM elements) ---------------------------------->
@@ -26,7 +28,7 @@
 // document.querySelectorAll('.student');
 // document.querySelectorAll('.student')[1];
 
-// // <--------------------------------- Create Element and Append it to DOM ---------------------------------->
+// // <------------------------------- Create Element and Append it to DOM ---------------------------------->
 
 // let newDiv = document.createElement('div');
 // newDiv.style.color = 'red';

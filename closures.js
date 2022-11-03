@@ -1,7 +1,6 @@
-// Topics: Closure, Advantages and Disadvantages
+// Topics discussed in this file : Closure, Advantages and Disadvantages
 
 // <--------------------------------------------- Closures -------------------------------------------------->
-
 
 // A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
 // One more way to define closure: Closures are functions that have access to the variables that are present in their scope chain even if the outer function ceases to exist.
@@ -100,5 +99,3 @@ x();
 //     }
 // }
 // z();
-
-

@@ -1,3 +1,5 @@
+// Topics discussed in this file : let, const, arrow functions, default parameter values, template literals/strings, destructuring, rest and spread operator
+
 // <----------------------------------------- Let and Const ------------------------------------------------>
 
 // ** Let **

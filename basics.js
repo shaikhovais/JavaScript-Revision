@@ -1,3 +1,5 @@
+// Topics discussed in this file : how to add js, comments, Input/Output, statements and expressions, datatypes, variables, loops, decision making statements, functions, global functions, object, operators, number and maths, date and time
+
 // <--------------------------------- 3 Ways to add JavaScript ---------------------------------->
 
 // 1) Embedding Code using Script tag 
@@ -24,6 +26,78 @@ alert("This is an alert");              // output in an alert box
 confirm("Are you sure?");               // yes/no dialog, returns true/false depending on user click
 prompt("Your age?","0");                // input dialog. Second argument is the initial value
 
+// <--------------------------------- Statements and expressions ---------------------------------->
+
+// Expression: Any unit of code that can be evaluated to a value is an expression.
+// e.g, 3, 5 * 10, true, "hello"
+
+// A statement is an instruction to perform a specific action. Such actions include creating a variable or a function, looping through an array of elements, evaluating code based on a specific condition etc. JavaScript programs are actually a sequence of statements.
+// e.g, let num = 2; if(...) {...} else {...}, for(....) {...}
+
+// **** Very important to understand react (You will understand only if you know react !!)
+// Curly brackets '{' and '}' allow us to embed bits of JavaScript within our JSX, but we can only include expressions and not statements.
+//e.g, 
+// function CountdownClock({ secondsRemaining }) {              //This will work
+//     return (
+//       <div>
+//         Time left:
+//         {Math.round(secondsRemaining / 60)} minutes!         // Expression
+//       </div>
+//     );
+// }
+
+// function CountdownClock({ secondsRemaining }) {              // This will not work
+//     return (
+//       <div>
+//         {if (secondsRemaining > 0) {                         // If else is statement, not expression. 
+//           `${secondsRemaining} seconds left`                 // It will throw syntax error
+//         } else {
+//           "Time expired!"
+//         }}
+//       </div>
+//     );
+//   }
+    
+// TIP: If we want to embed if/else logic in our JSX, we need to use a ternary operator expression:
+
+// <--------------------------------- Datatype ---------------------------------->
+
+// There are two data types in JavaScript.
+
+// 1) Primitive data type :
+// String : represents textual data	e.g, 'hello', "hello world!" etc
+// Number : an integer or a floating-point number e.g, 3, 3.234, 3e-2 etc.
+// BigInt : an integer with arbitrary precision e.g, 900719925124740999n , 1n etc.
+// Boolean : Any of two values: true or false e.g, true and false
+// undefined : a data type whose variable is not initialized e.g, let a;
+// null : denotes a null value e.g, let a = null;
+// Symbol : data type whose instances are unique and immutable e.g, let value = Symbol('hello');
+// To learn more about 'Symbol' : https://javascript.info/symbol
+
+// 2) Non-primitive (reference) data type or Complex types :
+// Object : An object is a complex data type that allows us to store collections of data, e.g, 
+let obj = {
+    firstName: "Shaikh",
+    lastName: "Ovais",
+    age: '21'
+}
+// Array : Arrays are a special type of objects. It is a special variable, which can hold more than one value. e.g,     
+let fruits = ['Mango', 'Apple', 'Banana', 'Watermelon'];        //typeof 'array' gives 'object'
+// Function : Function is a block of code designed to perform a particulaxr task. e,g 
+function sum(num1, num2) {
+    return num1 + num2;
+}
+
+// Primitive data types: The predefined data types provided by JavaScript language are known as primitive data types. Primitive data types are also known as in-built data types. Size depends on type of data structure
+// Non-primitive data types: The data types that are derived from primitive data types of the JavaScript language are known as non-primitive data types. Size is not fixed
+
+// JavaScript is a dynamically typed (loosely typed) language. JavaScript automatically determines the variables' data type for you.
+// It also means that a variable can be of one data type and later it can be changed to another data type. For example,
+let data;                               // data is of undefined type
+data = 5;                               // data is of integer type
+data = "JavaScript Programming";        // data is of string type
+
+//Learn more https://www.programiz.com/javascript/data-types
 
 // <--------------------------------- Variables ---------------------------------->
 let notDefinedVariable;             // default value of unassigned variable is 'undefined'
@@ -127,7 +201,7 @@ let arrowAddFunc = (a, b) => a + b;          //Arrow function (Learn more about 
 let sum = arrowAddFunc(1, 2);
 console.log("sum ", sum);
 
-((a, b) => {console.log(5 + 5)})();             //IIFE functions (Learn more about IIFE in extraTopics)
+((a, b) => {console.log(5 + 5)})();             //IIFE functions (Learn more about IIFE in miscellaneous)
 
 // <--------------------------------- Global Functions ---------------------------------->
 
@@ -202,6 +276,10 @@ console.log('a || b :', a || b);                      // Logical 'OR' : '3'
 
 //Bitwise operators
 
+//The typeof operator returns the type of a variable or an expression:
+console.log(typeof(12));                // string
+console.log(typeof("23"));              // number
+
 // <--------------------------------- Numbers and Maths ---------------------------------->
 let pi = 3.1415;
 
@@ -251,4 +329,3 @@ console.log("getMilliseconds() :", date.getMilliseconds());  // milliseconds (0-
 console.log("getMinutes() :", date.getMinutes());            // minutes (0-59)
 console.log("getSeconds() :", date.getSeconds());            // seconds (0-59)
 console.log("getTime() :", date.getTime());                  // milliseconds since 1970
-

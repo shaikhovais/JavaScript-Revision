@@ -1,3 +1,5 @@
+// Topics discussed in this file : String methods and array methods 
+
 // <----------------------------------------- String Methods ------------------------------------------------>
 
 let str = "My name is Cristiano Ronaldo.";
@@ -80,25 +82,39 @@ console.log("concat(footballers, basketballPlayers) : ", sportPlayers); // ['Dho
 
 cricketers.sort();                            // sort string alphabetically
 console.log("sort() : ", cricketers);
+
 cricketers.reverse();                         // reverse the array
 console.log("reverse() : ", cricketers);
 
 let numbers = [1,4,2,4,6,3,5,8,2];
-// console.log("numbers : ", numbers);
+
 console.log('find() :', numbers.find((num) => num > 5));      // returns the first element that fulfills the condition
+
 console.log('findIndex() :', numbers.findIndex((num) => num > 5)); // returns the index of first element that fulfills the condition
+
 console.log(numbers.some((num) => num > 4));   // returns true if condition is fulfilled for some element
 console.log(numbers.every((num) => num > 4));  // returns true if condition is fulfilled for every element
 
+
 let newNumbers = numbers.map((num) => num * 10);        // creates a new array by transforming every element in an array individually. 
 console.log("map() :", newNumbers);
+
 newNumbers = newNumbers.filter((num) => num < 50);      // creates a new array filled with elements that pass the condition provided in the function.
 console.log("filter() :", newNumbers);
+
 newNumbers = numbers.reduce((acc, curr) => acc + curr); // it takes all the elements in an array and reduces them into a single value.
 console.log("reduce() :", newNumbers);
-//polyfills of this methods are there in polyfills file
+//polyfills of this methods are there in polyfills.js file
 
 numbers.sort(function(a, b){return a - b});   // numeric sort ascending
 console.log("sort(function(a, b){return a - b}) : ", numbers);
 numbers.sort(function(a, b){return b - a});   // numeric sort descending
 console.log("sort(function(a, b){return b - a}) : ", numbers);
+
+numbers.forEach((num, index) => numbers[index] = num * 100);    // calls a callback function once for each element in an array, in order.
+console.log(numbers);                                 // [800, 600, 500, 400, 400, 300, 200, 200, 100]        
+
+// **** Very Important Interview Question : Difference between forEach and map method
+// 1) The returning value — The forEach() method returns undefined, while map() returns a new array with the transformed elements.
+// 2) Ability to chain other methods —The map()method is chainable. This means that you can chain other methods (like reduce(), sort(), filter(), and so on), after executing the map() method in an array. This is something you can’t do with forEach() because, as you can guess, it returns undefined.
+// 3) Mutability — Mutability means “Capacity or ability to change.” The map() method returns an entirely new array with transformed elements and the same amount of data. In the case of forEach(), even if it returns undefined, it can mutate the original array with the callback. Therefore, we see clearly that map() relies on immutability and forEach() is a mutator method.
