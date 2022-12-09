@@ -83,7 +83,7 @@ let obj = {
 }
 // Array : Arrays are a special type of objects. It is a special variable, which can hold more than one value. e.g,     
 let fruits = ['Mango', 'Apple', 'Banana', 'Watermelon'];        //typeof 'array' gives 'object'
-// Function : Function is a block of code designed to perform a particulaxr task. e,g 
+// Function : Function is a block of code designed to perform a particular task. e,g 
 function sum(num1, num2) {
     return num1 + num2;
 }
