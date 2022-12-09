@@ -31,7 +31,7 @@ prompt("Your age?","0");                // input dialog. Second argument is the 
 // Expression: Any unit of code that can be evaluated to a value is an expression.
 // e.g, 3, 5 * 10, true, "hello"
 
-// A statement is an instruction to perform a specific action. Such actions include creating a variable or a function, looping through an array of elements, evaluating code based on a specific condition etc. JavaScript programs are actually a sequence of statements.
+// A statement is an instruction to perform a specific action. Such actions include creating a variable or a function, looping through an array of elements, evaluating code based on a specific condition etc.   JavaScript programs are actually a sequence of statements.
 // e.g, let num = 2; if(...) {...} else {...}, for(....) {...}
 
 // **** Very important to understand react (You will understand only if you know react !!)
