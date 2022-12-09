@@ -4,7 +4,7 @@
 
 // // Scope determines the accessibility of variables, objects, and functions from different parts of the code.
 
-// // Types of scop in JavaScript:
+// // Types of scope in JavaScript:
 
 // // ******** Block Scope **********
 // // Variables declared inside a '{ }' block cannot be accessed from outside the block
